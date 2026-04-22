@@ -2,10 +2,10 @@
 
 ## Game Objects
 
-- PC: Frog/Chicken
-- NPC: Vessels. Vehicles.
-- Level: Water. Asphalt. Goals.
-- UI: Lives. Score.
+- **PC**: Frog/Chicken
+- **NPC**: Vessels. Vehicles.
+- **Level**: Water. Asphalt. Goals.
+- **UI**: Lives. Score.
 
 ### Other Game Engine Vocab
 
