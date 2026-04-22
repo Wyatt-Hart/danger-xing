@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dp46nxm4qxs46"]
+
+[ext_resource type="Script" uid="uid://d2ylk5fblpau0" path="res://Chicken/Chicken.gd" id="1_13h8f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_13h8f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nv08f"]
+albedo_color = Color(0.8257022, 0.22321922, 1.92523e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kahpe"]
+albedo_color = Color(0.91866046, 0.705592, 3.85046e-07, 1)
+
+[node name="Chicken" type="Node3D" unique_id=1642498313]
+script = ExtResource("1_13h8f")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=1413175171]
+transform = Transform3D(0.75, 0, 0, 0, 0.82197016, -0.25468633, 0, 0.21648338, 0.96702373, 0, 0.05849552, -0.001706183)
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="L_Wing" type="MeshInstance3D" parent="." unique_id=1870232232]
+transform = Transform3D(0.152, 0, 0, 0, 0.43516067, -0.1528118, 0, 0.11460885, 0.58021426, 0.41268885, 0.05849552, -0.001706183)
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="R_Wing" type="MeshInstance3D" parent="." unique_id=175227473]
+transform = Transform3D(0.152, 0, 0, 0, 0.43516067, -0.1528118, 0, 0.11460885, 0.58021426, -0.413, 0.058, -0.002)
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Head" type="MeshInstance3D" parent="." unique_id=1336411973]
+transform = Transform3D(0.469, 0, 0, 0, 0.49, 0, 0, 0, 0.5, 0, 0.5846346, 0.6163802)
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Comb" type="MeshInstance3D" parent="." unique_id=778940233]
+transform = Transform3D(0.056654453, 0, 0, 0, 0.21482971, 0.234834, 0, -0.35580426, 0.14178951, 0, 0.80409986, 0.6098012)
+material_override = SubResource("StandardMaterial3D_nv08f")
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Beak" type="MeshInstance3D" parent="." unique_id=466489080]
+transform = Transform3D(0.3363267, 0, 0, 0, 0.10048543, -0.023683382, 0, 0.008282594, 0.28732964, 0, 0.5017354, 0.99303174)
+material_override = SubResource("StandardMaterial3D_kahpe")
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Tail1" type="MeshInstance3D" parent="." unique_id=847582707]
+transform = Transform3D(0.4, 0, 0, 0, 0.3384583, -0.10187453, 0, 0.089140214, 0.3868095, 0, 0.62391436, -0.49300855)
+mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Tail2" type="MeshInstance3D" parent="." unique_id=1451650917]
+transform = Transform3D(0.3, 0, 0, 0, 0.24175593, -0.0764059, 0, 0.06367158, 0.29010713, 0, 0.87147737, -0.6657765)
+mesh = SubResource("BoxMesh_13h8f")

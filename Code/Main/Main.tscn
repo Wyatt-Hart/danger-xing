@@ -1,6 +1,45 @@
 [gd_scene format=3 uid="uid://cib786y4fr7cb"]
 
 [ext_resource type="Script" uid="uid://ckplnjj5kkyta" path="res://Main/Main.gd" id="1_lxy7q"]
+[ext_resource type="PackedScene" uid="uid://dp46nxm4qxs46" path="res://Chicken/Chicken.tscn" id="2_83ytx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83ytx"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_amygn"]
+sky_material = SubResource("ProceduralSkyMaterial_83ytx")
+
+[sub_resource type="Environment" id="Environment_ps1la"]
+background_mode = 2
+sky = SubResource("Sky_amygn")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_amygn"]
+albedo_color = Color(0.17614022, 0.26188743, 0.07295888, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ps1la"]
 
 [node name="Main" type="Node" unique_id=1391425956]
 script = ExtResource("1_lxy7q")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=184771576]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1359841322]
+environment = SubResource("Environment_ps1la")
+
+[node name="Chicken" parent="." unique_id=1642498313 instance=ExtResource("2_83ytx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=1352015026]
+transform = Transform3D(50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_amygn")
+mesh = SubResource("BoxMesh_ps1la")
+
+[node name="Rig" type="Node3D" parent="." unique_id=240912887]
+transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Rig" unique_id=798869460]
+transform = Transform3D(-1.0000001, 7.4505806e-08, -7.4505806e-08, 0, 0.70710677, 0.7071069, 8.940697e-08, 0.70710695, -0.7071068, 0, 8, -8)
