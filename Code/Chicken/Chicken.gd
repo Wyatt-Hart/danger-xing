@@ -7,6 +7,13 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("move_left"):
+		position.x += 1
+	elif Input.is_action_just_pressed("move_right"):
+		position.x -= 1
+	elif Input.is_action_just_pressed("move_forward"):
+		position.z += 1
+	elif Input.is_action_just_pressed("move_backward"):
+		position.z -= 1
+	

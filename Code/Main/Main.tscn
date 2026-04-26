@@ -20,6 +20,11 @@ albedo_color = Color(0.17614022, 0.26188743, 0.07295888, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ps1la"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83ytx"]
+albedo_color = Color(0.076041035, 0.076041035, 0.076041035, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_amygn"]
+
 [node name="Main" type="Node" unique_id=1391425956]
 script = ExtResource("1_lxy7q")
 
@@ -38,8 +43,17 @@ transform = Transform3D(50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_amygn")
 mesh = SubResource("BoxMesh_ps1la")
 
-[node name="Rig" type="Node3D" parent="." unique_id=240912887]
-transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 0, 0, 0)
+[node name="Road" type="MeshInstance3D" parent="." unique_id=663479426]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 1)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
 
-[node name="Camera3D" type="Camera3D" parent="Rig" unique_id=798869460]
-transform = Transform3D(-1.0000001, 7.4505806e-08, -7.4505806e-08, 0, 0.70710677, 0.7071069, 8.940697e-08, 0.70710695, -0.7071068, 0, 8, -8)
+[node name="Road2" type="MeshInstance3D" parent="." unique_id=83908664]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 3)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
+
+[node name="Road3" type="MeshInstance3D" parent="." unique_id=548283402]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 5)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")

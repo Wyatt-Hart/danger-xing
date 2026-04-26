@@ -5,6 +5,9 @@
 - **PC**: Frog/Chicken
 - **NPC**: Vessels. Vehicles.
 - **Level**: Water. Asphalt. Goals.
+  - Water.
+  - Lane.
+  - Goals.
 - **UI**: Lives. Score.
 
 ### Other Game Engine Vocab

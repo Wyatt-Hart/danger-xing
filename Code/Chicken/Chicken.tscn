@@ -10,7 +10,7 @@ albedo_color = Color(0.8257022, 0.22321922, 1.92523e-07, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kahpe"]
 albedo_color = Color(0.91866046, 0.705592, 3.85046e-07, 1)
 
-[node name="Chicken" type="Node3D" unique_id=1642498313]
+[node name="Chicken" type="Node3D" unique_id=448137431]
 script = ExtResource("1_13h8f")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=1413175171]
@@ -46,3 +46,9 @@ mesh = SubResource("BoxMesh_13h8f")
 [node name="Tail2" type="MeshInstance3D" parent="." unique_id=1451650917]
 transform = Transform3D(0.3, 0, 0, 0, 0.24175593, -0.0764059, 0, 0.06367158, 0.29010713, 0, 0.87147737, -0.6657765)
 mesh = SubResource("BoxMesh_13h8f")
+
+[node name="Rig" type="Node3D" parent="." unique_id=621048925]
+transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.9396926, 0, -0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Rig" unique_id=117909800]
+transform = Transform3D(-1.0000001, 7.4505806e-08, -7.4505806e-08, 0, 0.70710677, 0.7071069, 8.940697e-08, 0.70710695, -0.7071068, 0, 8, -8)
