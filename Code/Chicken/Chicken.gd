@@ -13,9 +13,8 @@ func on_collision(area: Area3D):
 	if area is Goal:
 		print("Goal!!!!")
 
-	# ToDo: Add more collision types
-	#if area is Car:
-	#	print("Dead :(")
+	if area is Car:
+		print("Dead :(")
 
 
 func _process(delta: float) -> void:
