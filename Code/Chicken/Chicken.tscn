@@ -62,3 +62,36 @@ transform = Transform3D(0.9396926, 0, 0.34202012, 0, 1, 0, -0.34202012, 0, 0.939
 
 [node name="Camera3D" type="Camera3D" parent="Rig" unique_id=117909800]
 transform = Transform3D(-1.0000001, 1.7881393e-07, -1.7881393e-07, 0, 0.70710653, 0.7071071, 2.682209e-07, 0.7071071, -0.70710665, -0.3383733, 5.393014, -5.7003126)
+
+[node name="UI" type="PanelContainer" parent="." unique_id=667564571]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -168.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = 92.0
+grow_horizontal = 0
+
+[node name="LivesUI" type="Label" parent="UI" unique_id=1043952491]
+layout_mode = 2
+text = "0123456789"
+
+[node name="GameOverContainer" type="PanelContainer" parent="." unique_id=1700587046]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 22.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverUI" type="Label" parent="GameOverContainer" unique_id=1781118178]
+layout_mode = 2
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
