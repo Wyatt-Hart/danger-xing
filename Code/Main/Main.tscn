@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ckplnjj5kkyta" path="res://Main/Main.gd" id="1_lxy7q"]
 [ext_resource type="PackedScene" uid="uid://dp46nxm4qxs46" path="res://Chicken/Chicken.tscn" id="2_83ytx"]
+[ext_resource type="PackedScene" uid="uid://barh826pplky5" path="res://Lane/Lane.tscn" id="3_6aewd"]
 [ext_resource type="PackedScene" uid="uid://c4v0peqkg130j" path="res://Goal/Goal.tscn" id="3_amygn"]
+[ext_resource type="PackedScene" uid="uid://d17l7nmy86h7e" path="res://Car/Car.tscn" id="4_ps1la"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83ytx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -47,32 +49,57 @@ transform = Transform3D(50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_amygn")
 mesh = SubResource("BoxMesh_ps1la")
 
-[node name="Road" type="MeshInstance3D" parent="." unique_id=663479426]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 1)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Lane" parent="." unique_id=1279878147 instance=ExtResource("3_6aewd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 1)
 
-[node name="Road2" type="MeshInstance3D" parent="." unique_id=83908664]
+[node name="Car" parent="Lane" unique_id=1509343675 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane" unique_id=725143909 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane" unique_id=1997875615 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane" unique_id=97138434 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane" unique_id=302210188 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane" unique_id=2023697480 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane" unique_id=1339914202 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane" unique_id=194422984 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane" unique_id=1929888406 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane2" type="MeshInstance3D" parent="." unique_id=83908664]
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 3)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")
 
-[node name="Road3" type="MeshInstance3D" parent="." unique_id=548283402]
+[node name="Lane3" type="MeshInstance3D" parent="." unique_id=548283402]
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 5)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")
 
-[node name="Road4" type="MeshInstance3D" parent="." unique_id=339582056]
+[node name="Lane4" type="MeshInstance3D" parent="." unique_id=339582056]
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 7)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")
 
-[node name="Road5" type="MeshInstance3D" parent="." unique_id=650879961]
+[node name="Lane5" type="MeshInstance3D" parent="." unique_id=650879961]
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 9)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")
 
-[node name="Road6" type="MeshInstance3D" parent="." unique_id=1302608050]
+[node name="Lane6" type="MeshInstance3D" parent="." unique_id=1302608050]
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 11)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")

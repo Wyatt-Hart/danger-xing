@@ -2,13 +2,25 @@
 
 ## Game Objects
 
-- **PC**: Frog/Chicken
-- **NPC**: Vessels. Vehicles.
-- **Level**: Water. Asphalt. Goals.
+- **PC**:
+  - Chicken
+
+- **NPC**:
+  - Vessels
+    - Boat
+    - Log
+  - Vehicles.
+    - Car
+    - Bus
+
+- **Level**:
   - Water.
   - Lane.
   - Goals.
-- **UI**: Lives. Score.
+
+- **UI**:
+  - Lives
+  - Score.
 
 ## TODO
 Needs smooth tween between positions

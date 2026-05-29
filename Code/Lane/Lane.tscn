@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://barh826pplky5"]
+
+[ext_resource type="Script" uid="uid://t7yb8npisjil" path="res://Lane/Lane.gd" id="1_cme2w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83ytx"]
+albedo_color = Color(0.076041035, 0.076041035, 0.076041035, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_amygn"]
+size = Vector3(50, 0.15, 1)
+
+[node name="Lane" type="MeshInstance3D" unique_id=1279878147]
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
+script = ExtResource("1_cme2w")

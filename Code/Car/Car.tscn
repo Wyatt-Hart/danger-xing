@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://d17l7nmy86h7e"]
+
+[ext_resource type="Script" uid="uid://dnhj4cvr6vhta" path="res://Car/Car.gd" id="1_argwm"]
+[ext_resource type="Material" uid="uid://b67ofpnw0cll0" path="res://Car/assets/GreenCarBody.tres" id="2_p3hxm"]
+[ext_resource type="Material" uid="uid://dlyf5cjkcjm5j" path="res://Car/assets/RubberTire.tres" id="3_vkism"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_plnjs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jcsow"]
+material = ExtResource("2_p3hxm")
+
+[sub_resource type="BoxMesh" id="BoxMesh_dc25y"]
+material = ExtResource("2_p3hxm")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_s5emg"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.075
+
+[sub_resource type="PrismMesh" id="PrismMesh_n3u1k"]
+left_to_right = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3vu53"]
+material = ExtResource("2_p3hxm")
+
+[node name="Car" type="Area3D" unique_id=1509343675]
+script = ExtResource("1_argwm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1131299800]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("BoxShape3D_plnjs")
+
+[node name="Mesh" type="Node3D" parent="." unique_id=1479596042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Mesh" unique_id=310862993]
+transform = Transform3D(0.5, 0, 0, 0, 0.25, 0, 0, 0, 0.85, 0, 0, 0)
+mesh = SubResource("BoxMesh_jcsow")
+
+[node name="Body2" type="MeshInstance3D" parent="Mesh" unique_id=565957409]
+transform = Transform3D(-0.45, 0, -8.2292715e-08, 0, 0.15, 0, 6.794811e-08, 0, -0.545, -0.0002462929, 0.19812107, -0.048515588)
+mesh = SubResource("BoxMesh_dc25y")
+
+[node name="Tires" type="MeshInstance3D" parent="Mesh" unique_id=69771013]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.24, -0.12, 0.287)
+material_override = ExtResource("3_vkism")
+mesh = SubResource("CylinderMesh_s5emg")
+
+[node name="Tires3" type="MeshInstance3D" parent="Mesh" unique_id=1840094497]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.24, -0.12, 0.287)
+material_override = ExtResource("3_vkism")
+mesh = SubResource("CylinderMesh_s5emg")
+
+[node name="Tires2" type="MeshInstance3D" parent="Mesh" unique_id=116785840]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.24, -0.12, -0.287)
+material_override = ExtResource("3_vkism")
+mesh = SubResource("CylinderMesh_s5emg")
+
+[node name="Tires4" type="MeshInstance3D" parent="Mesh" unique_id=23819872]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.24, -0.12, -0.287)
+material_override = ExtResource("3_vkism")
+mesh = SubResource("CylinderMesh_s5emg")
+
+[node name="Windshield" type="MeshInstance3D" parent="Mesh" unique_id=284782591]
+transform = Transform3D(-5.2453664e-09, 0, 0.43, 0, 0.16, 0, -0.12, 0, -1.8795896e-08, -0.00024626416, 0.17713854, 0.2807031)
+mesh = SubResource("PrismMesh_n3u1k")
+
+[node name="WindshieldRail" type="MeshInstance3D" parent="Mesh" unique_id=681660727]
+transform = Transform3D(-2.2724683e-10, -8.767313e-09, 0.01, -0.0057188817, 0.16406631, 2.2964541e-10, -0.008203315, -0.11437765, -4.3711387e-10, -0.21475375, 0.18613094, 0.27699274)
+mesh = SubResource("BoxMesh_3vu53")
+skeleton = NodePath("../Windshield")
+
+[node name="WindshieldRail2" type="MeshInstance3D" parent="Mesh" unique_id=1047174464]
+transform = Transform3D(-2.2724683e-10, -8.767313e-09, 0.01, -0.0057188817, 0.16406631, 2.2964541e-10, -0.008203315, -0.11437765, -4.3711387e-10, 0.21475372, 0.18600002, 0.2774821)
+mesh = SubResource("BoxMesh_3vu53")
+skeleton = NodePath("../Windshield")
