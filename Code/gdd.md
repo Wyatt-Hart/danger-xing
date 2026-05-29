@@ -10,6 +10,9 @@
   - Goals.
 - **UI**: Lives. Score.
 
+## TODO
+Needs smooth tween between positions
+
 ### Other Game Engine Vocab
 
 1. Godot = `Scene`

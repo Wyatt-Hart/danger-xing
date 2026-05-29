@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckplnjj5kkyta" path="res://Main/Main.gd" id="1_lxy7q"]
 [ext_resource type="PackedScene" uid="uid://dp46nxm4qxs46" path="res://Chicken/Chicken.tscn" id="2_83ytx"]
+[ext_resource type="PackedScene" uid="uid://c4v0peqkg130j" path="res://Goal/Goal.tscn" id="3_amygn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_83ytx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -24,6 +25,9 @@ albedo_color = Color(0.17614022, 0.26188743, 0.07295888, 1)
 albedo_color = Color(0.076041035, 0.076041035, 0.076041035, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_amygn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_83ytx"]
+size = Vector3(50, 0.13, 1)
 
 [node name="Main" type="Node" unique_id=1391425956]
 script = ExtResource("1_lxy7q")
@@ -57,3 +61,28 @@ mesh = SubResource("BoxMesh_amygn")
 transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 5)
 material_override = SubResource("StandardMaterial3D_83ytx")
 mesh = SubResource("BoxMesh_amygn")
+
+[node name="Road4" type="MeshInstance3D" parent="." unique_id=339582056]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 7)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
+
+[node name="Road5" type="MeshInstance3D" parent="." unique_id=650879961]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 9)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
+
+[node name="Road6" type="MeshInstance3D" parent="." unique_id=1302608050]
+transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 11)
+material_override = SubResource("StandardMaterial3D_83ytx")
+mesh = SubResource("BoxMesh_amygn")
+
+[node name="SafeZone" type="MeshInstance3D" parent="." unique_id=2004212714]
+mesh = SubResource("BoxMesh_83ytx")
+
+[node name="SafeZone2" type="MeshInstance3D" parent="." unique_id=1147209365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+mesh = SubResource("BoxMesh_83ytx")
+
+[node name="Goal" parent="." unique_id=1166665767 instance=ExtResource("3_amygn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
