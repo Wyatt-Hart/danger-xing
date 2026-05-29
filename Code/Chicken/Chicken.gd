@@ -16,22 +16,24 @@ func _ready() -> void:
 
 func on_collision(area: Area3D):
 	if area is Goal:
+		respawn()
 		print("Goal!!!!")
 
 	if area is Car:
-		print("Dead :(")
 		killed()
 
 func killed():
 	if lives <= 0:
-		print("GAME OVER!")
 		lives_ui.visible = false
 		gameover_ui.visible = true
 		pass
-	position = Vector3.ZERO
-	mesh.rotation_degrees.y = 0
+	respawn()
 	lives -= 1
 	lives_ui.text = "Lives: " + str(lives)
+
+func respawn():
+	position = Vector3.ZERO
+	mesh.rotation_degrees.y = 0
 
 
 func _process(delta: float) -> void:

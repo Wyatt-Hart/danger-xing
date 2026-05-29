@@ -23,11 +23,6 @@ albedo_color = Color(0.17614022, 0.26188743, 0.07295888, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ps1la"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83ytx"]
-albedo_color = Color(0.076041035, 0.076041035, 0.076041035, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_amygn"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_83ytx"]
 size = Vector3(50, 0.13, 1)
 
@@ -79,30 +74,283 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-
 [node name="Car9" parent="Lane" unique_id=1929888406 instance=ExtResource("4_ps1la")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
 
-[node name="Lane2" type="MeshInstance3D" parent="." unique_id=83908664]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 3)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Lane2" parent="." unique_id=1790249108 instance=ExtResource("3_6aewd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+speed_limit = 2.5
 
-[node name="Lane3" type="MeshInstance3D" parent="." unique_id=548283402]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 5)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Car" parent="Lane2" unique_id=104077460 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
 
-[node name="Lane4" type="MeshInstance3D" parent="." unique_id=339582056]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 7)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Car2" parent="Lane2" unique_id=133663213 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
 
-[node name="Lane5" type="MeshInstance3D" parent="." unique_id=650879961]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 9)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Car3" parent="Lane2" unique_id=962117686 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
 
-[node name="Lane6" type="MeshInstance3D" parent="." unique_id=1302608050]
-transform = Transform3D(50, 0, 0, 0, 0.15, 0, 0, 0, 1, 0, 0, 11)
-material_override = SubResource("StandardMaterial3D_83ytx")
-mesh = SubResource("BoxMesh_amygn")
+[node name="Car4" parent="Lane2" unique_id=358612562 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane2" unique_id=1070686475 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane2" unique_id=1220288453 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane2" unique_id=229323271 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane2" unique_id=1037143351 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane2" unique_id=916127909 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane3" parent="." unique_id=1490612987 instance=ExtResource("3_6aewd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 3)
+speed_limit = 3.0
+
+[node name="Car" parent="Lane3" unique_id=480880334 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane3" unique_id=1321970436 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane3" unique_id=1445360608 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane3" unique_id=47695980 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane3" unique_id=635061938 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane3" unique_id=1972247862 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane3" unique_id=70758399 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane3" unique_id=878168982 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane3" unique_id=1936714403 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane4" parent="." unique_id=412211005 instance=ExtResource("3_6aewd")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0, 4)
+speed_limit = 3.5
+
+[node name="Car" parent="Lane4" unique_id=649849024 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane4" unique_id=631752960 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane4" unique_id=2083570158 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane4" unique_id=388193990 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane4" unique_id=1691695300 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane4" unique_id=1220698643 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane4" unique_id=1392856071 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane4" unique_id=1563808727 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane4" unique_id=579638063 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane5" parent="." unique_id=950965747 instance=ExtResource("3_6aewd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 5)
+speed_limit = 4.0
+
+[node name="Car" parent="Lane5" unique_id=274775364 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane5" unique_id=511809631 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane5" unique_id=1432809187 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane5" unique_id=524759080 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane5" unique_id=85973397 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane5" unique_id=1041611733 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane5" unique_id=757658219 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane5" unique_id=1209371914 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane5" unique_id=2068776208 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane6" parent="." unique_id=398356457 instance=ExtResource("3_6aewd")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0, 7)
+
+[node name="Car" parent="Lane6" unique_id=266276827 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane6" unique_id=792934574 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane6" unique_id=203188483 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane6" unique_id=1122916825 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane6" unique_id=1479948921 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane6" unique_id=1023276381 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane6" unique_id=2040985228 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane6" unique_id=274426194 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane6" unique_id=357703981 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane7" parent="." unique_id=187892376 instance=ExtResource("3_6aewd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 8)
+speed_limit = 2.5
+
+[node name="Car" parent="Lane7" unique_id=998510 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane7" unique_id=496779355 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane7" unique_id=630301230 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane7" unique_id=23353878 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane7" unique_id=1053024522 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane7" unique_id=1523081677 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane7" unique_id=1602287769 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane7" unique_id=1426542986 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane7" unique_id=1230155070 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane8" parent="." unique_id=1555467242 instance=ExtResource("3_6aewd")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0, 9)
+speed_limit = 3.0
+
+[node name="Car" parent="Lane8" unique_id=1373688704 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane8" unique_id=789685474 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane8" unique_id=1115478418 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane8" unique_id=1865838746 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane8" unique_id=1067627588 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane8" unique_id=611403698 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane8" unique_id=1684397307 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane8" unique_id=1907278437 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane8" unique_id=848737423 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane9" parent="." unique_id=88237400 instance=ExtResource("3_6aewd")]
+transform = Transform3D(-1, 0, 2.6226832e-07, 0, 1, 0, -2.6226832e-07, 0, -1, 0, 0, 10)
+speed_limit = 3.5
+
+[node name="Car" parent="Lane9" unique_id=1247393306 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane9" unique_id=1255920723 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane9" unique_id=848601713 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane9" unique_id=416336339 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane9" unique_id=2088159067 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane9" unique_id=1636143923 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane9" unique_id=969072613 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane9" unique_id=1541630666 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane9" unique_id=888810136 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
+
+[node name="Lane10" parent="." unique_id=28232 instance=ExtResource("3_6aewd")]
+transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0, 0, 11)
+speed_limit = 4.0
+
+[node name="Car" parent="Lane10" unique_id=29795784 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -3, 0, 8.34465e-07)
+
+[node name="Car2" parent="Lane10" unique_id=772648985 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -7, 0, 1.1920929e-06)
+
+[node name="Car3" parent="Lane10" unique_id=1150256254 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -14, 0, 1.847744e-06)
+
+[node name="Car4" parent="Lane10" unique_id=592803614 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 12, 0, -4.7683716e-07)
+
+[node name="Car5" parent="Lane10" unique_id=1800524177 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 8, 0, -1.1920929e-07)
+
+[node name="Car6" parent="Lane10" unique_id=2566355 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 1, 0, 5.364418e-07)
+
+[node name="Car7" parent="Lane10" unique_id=1009585272 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, -18, 0, 2.1457672e-06)
+
+[node name="Car8" parent="Lane10" unique_id=798687917 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 23, 0, -1.4305115e-06)
+
+[node name="Car9" parent="Lane10" unique_id=1560418843 instance=ExtResource("4_ps1la")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-07, 16, 0, -8.34465e-07)
 
 [node name="SafeZone" type="MeshInstance3D" parent="." unique_id=2004212714]
 mesh = SubResource("BoxMesh_83ytx")
