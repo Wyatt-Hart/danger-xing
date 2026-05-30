@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dr60xawyh8org"]
+
+[ext_resource type="Script" uid="uid://4luqax8h1xgf" path="res://Vessel/Vessel.gd" id="1_blvak"]
+[ext_resource type="Material" uid="uid://c8jnxt34ub72p" path="res://Vessel/assets/Wood.tres" id="1_fywir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_blvak"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qvw4p"]
+
+[node name="Vessel" type="Area3D" unique_id=2005318235]
+script = ExtResource("1_blvak")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1921614058]
+shape = SubResource("BoxShape3D_blvak")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=767497536]
+transform = Transform3D(-2.7619473e-08, -1, 0, 0.6318599, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("1_fywir")
+mesh = SubResource("CapsuleMesh_qvw4p")
