@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://c8jnxt34ub72p" path="res://Vessel/assets/Wood.tres" id="1_fywir"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blvak"]
+size = Vector3(1.25, 0.75, 0.65)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qvw4p"]
 

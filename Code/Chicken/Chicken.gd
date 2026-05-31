@@ -3,23 +3,27 @@ class_name Chicken
 
 @onready var mesh: Node3D = $Mesh
 @onready var lives_ui: Label = $UI/LivesUI
+@onready var score_ui: Label = $UI/ScoreUI
 @onready var gameover_ui: PanelContainer = $GameOverContainer
 
 var lives: int = 8
+var score: int = 0
 
 # Position
 var spawn_point: Vector3
 var from: Vector3
 var to: Vector3
 var weight: float = 1.0
-var lerp_speed: float = 12.0 # m/s
-var isLerping: bool = false
+@export var lerp_speed: float = 12.0 # m/s
+var is_lerping: bool = false
+var riding_vessel: Vessel = null
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area_entered.connect(on_collision)
 	lives_ui.text = "Lives: " + str(lives)
+	score_ui.text = "Score: " + str(score)
 	gameover_ui.visible = false
 	spawn_point = position
 	from = spawn_point
@@ -27,15 +31,19 @@ func _ready() -> void:
 
 func on_collision(area: Area3D):
 	if area is Goal:
-		respawn()
+		area.occupy()
+		goal()
 		print("Goal!!!!")
 
 	if area is Car:
+		print("RIP: Hit by car")
 		destroy()
 
 	if area is Vessel:
+		riding_vessel = area
 		print("Riding vessel ...")
-	elif area is River:
+	elif area is River and riding_vessel == null:
+		print("RIP: Fell in river")
 		destroy()
 
 func destroy():
@@ -47,9 +55,17 @@ func destroy():
 	lives -= 1
 	lives_ui.text = "Lives: " + str(lives)
 
+func goal():
+	respawn()
+	#TODO: Handle Game complete/next level logic
+	score += 1
+	score_ui.text = "Score: " + str(score)
+
 func respawn():
 	weight = 1.0
 	position = spawn_point
+	to = spawn_point
+	from = spawn_point
 	mesh.rotation_degrees.y = 0
 
 
@@ -58,7 +74,7 @@ func _process(delta: float) -> void:
 		return
 	
 	# If weight < 1.0, then we are lerping/moving
-	if isLerping == false:
+	if is_lerping == false:
 		if Input.is_action_just_pressed("move_left"):
 			move(Vector3.LEFT, 90.0)
 	
@@ -66,23 +82,30 @@ func _process(delta: float) -> void:
 			move(Vector3.RIGHT, -90.0)
 	
 		elif Input.is_action_just_pressed("move_forward"):
+			riding_vessel = null
 			move(Vector3.FORWARD, 0.0)
 
 		elif Input.is_action_just_pressed("move_backward"):
+			riding_vessel = null
 			move(Vector3.BACK, 180.0)
 	
 	# Update position
 	if weight < 1.0:
-		isLerping = true
+		is_lerping = true
 		weight += lerp_speed * delta
+		position = lerp(from, to, weight)
 	else:
-		isLerping = false
+		is_lerping = false
 		weight = 1.0
 		from = to
+	if riding_vessel:
+		position.x = riding_vessel.global_position.x
+		position.z = riding_vessel.global_position.z
 
-	position = lerp(from, to, weight)
-
+	
 func move(direction: Vector3, rotation: float):
+	from = position
 	to = from - direction
+	to.x = to.round().x
 	weight = 0.0
 	mesh.rotation_degrees.y = rotation

@@ -2,8 +2,12 @@
 
 ## Game Objects
 
-- **PC**:
-  - Chicken
+### Chicken
+Chicken is the player character
+Player moves between points
+ - Lives
+ - Position (grid) and (vessel)
+ - Riding
 
 - **NPC**:
   - Vessels
