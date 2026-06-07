@@ -6,7 +6,7 @@ class_name Chicken
 @onready var score_ui: Label = $UI/ScoreUI
 @onready var gameover_ui: PanelContainer = $GameOverContainer
 
-var lives: int = 8
+var lives: int = 80
 var score: int = 0
 
 # Position
@@ -60,8 +60,13 @@ func goal():
 	#TODO: Handle Game complete/next level logic
 	score += 1
 	score_ui.text = "Score: " + str(score)
+	if get_parent().is_game_over():
+		print("Congratulations!!! You Win!!!")
+	else:
+		print("Keep going!")
 
 func respawn():
+	mesh.hide() # Will show again once lerp is done
 	weight = 1.0
 	position = spawn_point
 	to = spawn_point
@@ -98,6 +103,7 @@ func _process(delta: float) -> void:
 		is_lerping = false
 		weight = 1.0
 		from = to
+		mesh.show()
 	if riding_vessel:
 		position.x = riding_vessel.global_position.x
 		position.z = riding_vessel.global_position.z
@@ -107,5 +113,6 @@ func move(direction: Vector3, rotation: float):
 	from = position
 	to = from - direction
 	to.x = to.round().x
+	to.z = to.round().z
 	weight = 0.0
 	mesh.rotation_degrees.y = rotation

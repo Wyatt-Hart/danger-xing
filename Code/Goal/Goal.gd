@@ -3,7 +3,7 @@ class_name Goal
 
 
 @onready var chicken: Node3D = $Chicken
-
+var is_occupied: bool = false
 
 func _ready() -> void:
 	chicken.hide()
@@ -14,4 +14,5 @@ func _ready() -> void:
 # - [ ] Does the player care?
 
 func occupy():
+	is_occupied = true
 	chicken.show()

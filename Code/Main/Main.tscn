@@ -26,8 +26,9 @@ albedo_color = Color(0.17614022, 0.26188743, 0.07295888, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ps1la"]
 
-[node name="Main" type="Node" unique_id=1391425956]
+[node name="Main" type="Node" unique_id=1391425956 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_lxy7q")
+goals = [NodePath("Goal3"), NodePath("Goal2"), NodePath("Goal"), NodePath("Goal4"), NodePath("Goal5")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=184771576]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -37,7 +38,7 @@ shadow_enabled = true
 environment = SubResource("Environment_ps1la")
 
 [node name="Chicken" parent="." unique_id=1642498313 instance=ExtResource("2_83ytx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2)
 
 [node name="Ground" type="MeshInstance3D" parent="." unique_id=1352015026]
 transform = Transform3D(50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0)
@@ -201,6 +202,18 @@ transform = Transform3D(1.3113416e-07, 0, 1, 0, 0.9999999, 0, -1, 0, 1.3113416e-
 [node name="Goal" parent="." unique_id=1166665767 instance=ExtResource("3_amygn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 
+[node name="Goal4" parent="." unique_id=478792734 instance=ExtResource("3_amygn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 12)
+
+[node name="Goal5" parent="." unique_id=311421767 instance=ExtResource("3_amygn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
+
+[node name="Goal2" parent="." unique_id=270284925 instance=ExtResource("3_amygn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+
+[node name="Goal3" parent="." unique_id=1560571180 instance=ExtResource("3_amygn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+
 [node name="SafeZone" parent="." unique_id=526925375 instance=ExtResource("3_6aewd")]
 material_override = ExtResource("7_qg80j")
 
@@ -270,15 +283,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
 [node name="Vessel15" parent="River5" unique_id=1764568939 instance=ExtResource("8_qg80j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
-
-[node name="River6" parent="." unique_id=1711274472 instance=ExtResource("7_hh5pf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="Vessel" parent="River6" unique_id=2037869318 instance=ExtResource("8_qg80j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
-
-[node name="Vessel2" parent="River6" unique_id=272727421 instance=ExtResource("8_qg80j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
-
-[node name="Vessel3" parent="River6" unique_id=196734873 instance=ExtResource("8_qg80j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
