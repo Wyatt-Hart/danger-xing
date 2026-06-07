@@ -1,6 +1,7 @@
 extends Area3D
 class_name Chicken
 
+@onready var collider: CollisionShape3D = $CollisionShape3D
 @onready var mesh: Node3D = $Mesh
 @onready var lives_ui: Label = $UI/LivesUI
 @onready var score_ui: Label = $UI/ScoreUI
@@ -52,18 +53,17 @@ func destroy():
 		lives_ui.visible = false
 		gameover_ui.visible = true
 		pass
-	lives -= 1
+	update_lives(-1)
+
+func update_lives(delta_lives: int):
+	lives += delta_lives
 	lives_ui.text = "Lives: " + str(lives)
 
 func goal():
 	respawn()
-	#TODO: Handle Game complete/next level logic
 	score += 1
 	score_ui.text = "Score: " + str(score)
-	if get_parent().is_game_over():
-		print("Congratulations!!! You Win!!!")
-	else:
-		print("Keep going!")
+	get_parent().is_level_complete()
 
 func respawn():
 	mesh.hide() # Will show again once lerp is done
@@ -72,6 +72,7 @@ func respawn():
 	to = spawn_point
 	from = spawn_point
 	mesh.rotation_degrees.y = 0
+	collider.set_deferred("disabled", true)
 
 
 func _process(delta: float) -> void:
@@ -99,11 +100,12 @@ func _process(delta: float) -> void:
 		is_lerping = true
 		weight += lerp_speed * delta
 		position = lerp(from, to, weight)
-	else:
+	elif weight >= 1.0 and is_lerping == true:
 		is_lerping = false
 		weight = 1.0
 		from = to
 		mesh.show()
+		collider.set_deferred("disabled", false)
 	if riding_vessel:
 		position.x = riding_vessel.global_position.x
 		position.z = riding_vessel.global_position.z
