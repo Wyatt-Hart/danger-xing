@@ -7,7 +7,7 @@ class_name Chicken
 @onready var score_ui: Label = $UI/ScoreUI
 @onready var gameover_ui: PanelContainer = $GameOverContainer
 
-var lives: int = 80
+var lives: int = 8
 var score: int = 0
 
 # Position

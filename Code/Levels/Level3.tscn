@@ -37,7 +37,7 @@ shadow_enabled = true
 environment = SubResource("Environment_ps1la")
 
 [node name="Chicken" parent="." unique_id=1260961011 instance=ExtResource("2_q5lgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29962003, -8)
 
 [node name="Ground" type="MeshInstance3D" parent="." unique_id=196820167]
 transform = Transform3D(50, 0, 0, 0, 0.1, 0, 0, 0, 50, 0, 0, 0)

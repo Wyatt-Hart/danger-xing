@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dp46nxm4qxs46"]
 
 [ext_resource type="Script" uid="uid://d2ylk5fblpau0" path="res://Chicken/Chicken.gd" id="1_13h8f"]
+[ext_resource type="FontFile" uid="uid://bwnjk2icht4cd" path="res://Fonts/Slackey/Slackey-Regular.ttf" id="2_kahpe"]
+[ext_resource type="FontFile" uid="uid://bd5ntpi36v2ja" path="res://Fonts/Ranchers/Ranchers-Regular.ttf" id="3_htchh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_13h8f"]
 size = Vector3(0.9, 0.9, 0.9)
@@ -13,6 +15,42 @@ albedo_color = Color(0.8257022, 0.22321922, 1.92523e-07, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kahpe"]
 albedo_color = Color(0.91866046, 0.705592, 3.85046e-07, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13h8f"]
+bg_color = Color(0.23670349, 0.6941797, 0.5117995, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.4117647, 0.6156863, 0.627451)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
+expand_margin_left = 12.0
+expand_margin_top = 4.0
+expand_margin_right = 12.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv08f"]
+bg_color = Color(0.23670349, 0.6941797, 0.5117995, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.4117647, 0.6156863, 0.627451)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
+expand_margin_left = 32.0
+expand_margin_top = 4.0
+expand_margin_right = 32.0
+expand_margin_bottom = 8.0
+
 [node name="Chicken" type="Area3D" unique_id=1260961011]
 script = ExtResource("1_13h8f")
 
@@ -21,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("BoxShape3D_13h8f")
 
 [node name="Mesh" type="Node3D" parent="." unique_id=448137431]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.109493196, 0)
 
 [node name="Body" type="MeshInstance3D" parent="Mesh" unique_id=1413175171]
 transform = Transform3D(0.75, 0, 0, 0, 0.82197016, -0.25468633, 0, 0.21648338, 0.96702373, 0, 0.05849552, -0.001706183)
@@ -69,21 +107,24 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -168.0
 offset_top = 9.0
-offset_right = -9.0
+offset_right = -36.0
 offset_bottom = 52.0
 grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_13h8f")
 
 [node name="LivesUI" type="Label" parent="UI" unique_id=1043952491]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
-text = "0123456789"
+theme_override_fonts/font = ExtResource("2_kahpe")
+text = "Lives: 1234"
 
 [node name="ScoreUI" type="Label" parent="UI" unique_id=1109280252]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
-text = "9876543210"
+theme_override_fonts/font = ExtResource("2_kahpe")
+text = "Score: 4321"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -99,9 +140,11 @@ offset_right = 22.0
 offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nv08f")
 
 [node name="GameOverUI" type="Label" parent="GameOverContainer" unique_id=1781118178]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_htchh")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1

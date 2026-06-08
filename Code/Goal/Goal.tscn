@@ -56,7 +56,7 @@ mesh = SubResource("BoxMesh_0wg2r")
 skeleton = NodePath("../../..")
 
 [node name="Chicken" type="Node3D" parent="." unique_id=798128707]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.192, -0.012)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.40162954, -0.012)
 
 [node name="Body" type="MeshInstance3D" parent="Chicken" unique_id=109673514]
 transform = Transform3D(0.75, 0, 0, 0, 0.82197016, -0.25468633, 0, 0.21648338, 0.96702373, 0, 0.05849552, -0.001706183)
