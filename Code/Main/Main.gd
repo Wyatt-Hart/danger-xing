@@ -11,6 +11,7 @@ const LEVEL_3 = preload("res://Levels/Level3.tscn")
 var level_files: Array[PackedScene]
 var level: Level = null
 var level_index: int = 0
+var new_game_plus_level = 0
 
 func _ready() -> void:
 	# Level Ordering
@@ -32,7 +33,9 @@ func next_level():
 	if level_index > level_files.size() - 1:
 		print("Starting NG+")
 		level_index = 0;
-	load_level(level_files[level_index])
+		pause_menu.show_victory_screen()
+	else:
+		load_level(level_files[level_index])
 
 func game_over():
 	pause_menu.show_game_over()

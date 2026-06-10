@@ -7,13 +7,14 @@ class_name PauseMenu
 @onready var restart_button: Button = $VBox/RestartButton
 @onready var quit_button: Button = $VBox/QuitButton
 var is_pause_menu: bool = false
+var new_game_plus: int = 0
 
 var main: Main
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Signal Hooks
-	start_button.pressed.connect(on_play)
+	start_button.pressed.connect(on_start)
 	resume_button.pressed.connect(on_resume)
 	restart_button.pressed.connect(on_restart)
 	quit_button.pressed.connect(on_quit)
@@ -30,9 +31,10 @@ func _process(delta: float) -> void:
 		get_tree().paused = !get_tree().paused
 	
 
-func on_play():
+func on_start():
 	show_pause_menu()
 	self.hide()
+	main.new_game_plus_level += 1
 	main.load_level(main.level_files[0])
 
 func on_resume():
@@ -68,4 +70,13 @@ func show_game_over():
 	start_button.hide()
 	resume_button.hide()
 	restart_button.show()
+	self.show()
+
+func show_victory_screen():
+	label.text = "Congratulations!\nYou Win"
+	is_pause_menu = false
+	start_button.text = "New Game +"
+	start_button.show()
+	resume_button.hide()
+	restart_button.hide()
 	self.show()
