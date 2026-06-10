@@ -1,7 +1,7 @@
 # Danger X-ing
 
 ## Project Overview
-This game is a recreation of the classic arcade game "Frogger". The purpose is simple, safely get to the nests on the other side of the river without being hit or falling into the water. Currently there are only 3 levels and a basic Victory screen if you manage to make it to the end.
+This game is a recreation of the classic arcade game "Frogger". The goal is simple, safely get to the nests on the other side of the river without being hit or falling into the water. Currently there are only 3 levels and a basic Victory screen if you manage to make it to the end.
 
 ## Specifications
 This game was coded in GD Script using Godot 4.6.2.
