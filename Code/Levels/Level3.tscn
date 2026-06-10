@@ -319,18 +319,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
 [node name="Vessel" parent="River1" unique_id=2005318235 instance=ExtResource("8_hx0pg")]
 
+[node name="Vessel5" parent="River1" unique_id=1032004211 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
 [node name="Vessel2" parent="River1" unique_id=856968219 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
 [node name="Vessel3" parent="River1" unique_id=1179576390 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 
+[node name="Vessel4" parent="River1" unique_id=1284228460 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+
 [node name="River2" parent="." unique_id=1156835057 instance=ExtResource("7_dxjb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
-speed_limit = 2.5
+speed_limit = 3.5
 
 [node name="Vessel4" parent="River2" unique_id=1491731875 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Vessel8" parent="River2" unique_id=1874906340 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
 
 [node name="Vessel5" parent="River2" unique_id=1575185990 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
@@ -338,12 +347,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
 [node name="Vessel6" parent="River2" unique_id=1591301625 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
+[node name="Vessel7" parent="River2" unique_id=800861758 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0)
+
 [node name="River3" parent="." unique_id=1467964425 instance=ExtResource("7_dxjb0")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 8)
 speed_limit = 3.0
 
 [node name="Vessel7" parent="River3" unique_id=756860496 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+
+[node name="Vessel10" parent="River3" unique_id=1110790474 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 4.7683716e-07)
 
 [node name="Vessel8" parent="River3" unique_id=271636525 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
@@ -353,23 +368,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
 [node name="River4" parent="." unique_id=1105327905 instance=ExtResource("7_dxjb0")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 9)
-speed_limit = 3.5
+speed_limit = 4.5
 
 [node name="Vessel10" parent="River4" unique_id=540054621 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="Vessel13" parent="River4" unique_id=1253362456 instance=ExtResource("8_hx0pg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 2.861023e-06)
 
 [node name="Vessel11" parent="River4" unique_id=2028087798 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
 
 [node name="Vessel12" parent="River4" unique_id=743208862 instance=ExtResource("8_hx0pg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 0)
 
 [node name="River5" parent="." unique_id=1148592118 instance=ExtResource("7_dxjb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 speed_limit = 4.0
 
 [node name="Vessel13" parent="River5" unique_id=539165636 instance=ExtResource("8_hx0pg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 
 [node name="Vessel14" parent="River5" unique_id=1246143705 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
@@ -379,16 +397,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
 
 [node name="River6" parent="." unique_id=1822617746 instance=ExtResource("7_dxjb0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
-speed_limit = 4.5
+speed_limit = 5.5
 
 [node name="Vessel13" parent="River6" unique_id=1789418862 instance=ExtResource("8_hx0pg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
 
 [node name="Vessel14" parent="River6" unique_id=856349994 instance=ExtResource("8_hx0pg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
 [node name="Vessel15" parent="River6" unique_id=505033456 instance=ExtResource("8_hx0pg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
 
 [node name="Goal" parent="." unique_id=1166665767 instance=ExtResource("5_4c4gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)

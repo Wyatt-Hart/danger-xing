@@ -6,6 +6,8 @@ const LEVEL_1 = preload("res://Levels/Level1.tscn")
 const LEVEL_2 = preload("res://Levels/Level2.tscn")
 const LEVEL_3 = preload("res://Levels/Level3.tscn")
 
+@onready var pause_menu: PauseMenu = $PauseMenu
+
 var level_files: Array[PackedScene]
 var level: Level = null
 var level_index: int = 0
@@ -31,3 +33,6 @@ func next_level():
 		print("Starting NG+")
 		level_index = 0;
 	load_level(level_files[level_index])
+
+func game_over():
+	pause_menu.show_game_over()

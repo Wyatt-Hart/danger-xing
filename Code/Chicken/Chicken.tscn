@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bd5ntpi36v2ja" path="res://Fonts/Ranchers/Ranchers-Regular.ttf" id="3_htchh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_13h8f"]
-size = Vector3(0.9, 0.9, 0.9)
+size = Vector3(0.9, 0.5505859, 0.6375977)
 
 [sub_resource type="BoxMesh" id="BoxMesh_13h8f"]
 
@@ -55,7 +55,7 @@ expand_margin_bottom = 8.0
 script = ExtResource("1_13h8f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=639933574]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.075292975, 0.026806653)
 shape = SubResource("BoxShape3D_13h8f")
 
 [node name="Mesh" type="Node3D" parent="." unique_id=448137431]

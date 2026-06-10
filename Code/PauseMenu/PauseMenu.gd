@@ -6,6 +6,7 @@ class_name PauseMenu
 @onready var resume_button: Button = $VBox/ResumeButton
 @onready var restart_button: Button = $VBox/RestartButton
 @onready var quit_button: Button = $VBox/QuitButton
+var is_pause_menu: bool = false
 
 var main: Main
 
@@ -19,20 +20,18 @@ func _ready() -> void:
 
 	# Setup UI for Main Menu
 	main = get_parent()
-	make_main_menu()
-	
-	show()
+	show_main_menu()
 	
 	pass # Replace with function body.
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("pause") and is_pause_menu:
 		self.visible = !self.visible
 		get_tree().paused = !get_tree().paused
 	
 
 func on_play():
-	make_pause_menu()
+	show_pause_menu()
 	self.hide()
 	main.load_level(main.level_files[0])
 
@@ -42,25 +41,31 @@ func on_resume():
 
 func on_restart():
 	main.load_level(main.level_files[0])
+	self.hide()
 
 func on_quit():
 	get_tree().quit()
 
 # UI Changes
-func make_pause_menu():
+func show_pause_menu():
 	label.text = "Paused"
+	is_pause_menu = true
 	start_button.hide()
 	resume_button.show()
 	restart_button.hide()
 
-func make_main_menu():
+func show_main_menu():
 	label.text = "Danger X-ing"
+	is_pause_menu = false
 	start_button.show()
 	resume_button.hide()
 	restart_button.hide()
+	self.show()
 
-func make_game_over():
+func show_game_over():
 	label.text = "Game Over!"
+	is_pause_menu = false
 	start_button.hide()
 	resume_button.hide()
 	restart_button.show()
+	self.show()

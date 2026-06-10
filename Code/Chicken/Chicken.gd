@@ -7,6 +7,7 @@ class_name Chicken
 @onready var score_ui: Label = $UI/ScoreUI
 @onready var gameover_ui: PanelContainer = $GameOverContainer
 
+var main: Main
 var lives: int = 8
 var score: int = 0
 
@@ -29,6 +30,7 @@ func _ready() -> void:
 	spawn_point = position
 	from = spawn_point
 	to = spawn_point
+	main = get_parent().get_parent()
 
 func on_collision(area: Area3D):
 	if area is Goal:
@@ -51,7 +53,8 @@ func destroy():
 	respawn()
 	if lives <= 0:
 		lives_ui.visible = false
-		gameover_ui.visible = true
+		#gameover_ui.visible = true
+		main.game_over()
 		pass
 	update_lives(-1)
 
