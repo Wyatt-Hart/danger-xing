@@ -46,7 +46,10 @@ func on_restart():
 	self.hide()
 
 func on_quit():
-	get_tree().quit()
+	if OS.has_feature("web"):
+		main.load_level(main.level_files[main.MainMenu])
+	else:
+		get_tree().quit()
 
 # UI Changes
 func show_pause_menu():
