@@ -14,7 +14,9 @@ Game elements include:
   
 Meshes were designed in Godot using basic MeshInstance3D nodes and custom made materials.
 
-
+## Demo
+In the build folder there is a version built for linux as well as a web version.
+The web application version can be found [here: https://wyatt-hart.github.io/danger-xing/]. (Note: this version is still not consistantly working online, downloading from the build page is recommended)
 
 
 ###### Last modified with: Godot 4.6.2
