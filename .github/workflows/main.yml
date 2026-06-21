@@ -19,11 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Templates
-        run: |
-          mkdir -p ~/.local/share/godot/templates
-          cp -r /root/.local/share/godot/templates/* ~/.local/share/godot/templates/
-
       - name: Build Web Export
         run: |
           mkdir -p build/web
