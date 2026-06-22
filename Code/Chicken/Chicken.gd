@@ -32,6 +32,8 @@ var riding_vessel: Vessel = null
 func _ready() -> void:
 	if !is_mobile_web():
 		touch_controls.hide()
+	else:
+		touch_controls.show()
 	area_entered.connect(on_collision)
 	up_arrow_btn.pressed.connect(move.bind(Vector3.FORWARD, 0.0))
 	left_arrow_btn.pressed.connect(move.bind(Vector3.LEFT, 90.0))
@@ -138,6 +140,7 @@ func move(direction: Vector3, rotation: float):
 func is_mobile_web() -> bool:
 	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
 		return true
-	if OS.has_feature("mobile"):
+	elif OS.has_feature("mobile"):
 		return true
-	return false
+	else:
+		return false
