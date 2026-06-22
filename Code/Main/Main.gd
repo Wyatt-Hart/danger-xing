@@ -19,6 +19,10 @@ func _ready() -> void:
 	level_files.append(LEVEL_2)
 	level_files.append(LEVEL_3)
 	load_level(MainMenu)
+	
+	# Fix UI for Mobile
+	if is_web_mobile():
+		get_tree().root.content_scale_factor = 3
 
 
 func load_level(scene: PackedScene):
@@ -39,3 +43,11 @@ func next_level():
 
 func game_over():
 	pause_menu.show_game_over()
+	
+func is_web_mobile() -> bool:
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		return true
+	elif OS.has_feature("mobile"):
+		return true
+	else:
+		return false
