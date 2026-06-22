@@ -4,7 +4,7 @@
 This game is a recreation of the classic arcade game "Frogger". The goal is simple, safely get to the nests on the other side of the river without being hit or falling into the water. Currently there are only 3 levels and a basic Victory screen if you manage to make it to the end.
 
 ## Specifications
-This game was coded in GD Script using Godot 4.6.2.
+This game was coded in GD Script using Godot 4.7.
 
 Game elements include:
   - NPCs: Cars driving along the road will kill player if they collide
@@ -16,7 +16,7 @@ Meshes were designed in Godot using basic MeshInstance3D nodes and custom made m
 
 ## Demo
 In the build folder there is a version built for linux as well as a web version.
-The web application version can be found [here](https://wyatt-hart.github.io/danger-xing/). (Note: this version is still not consistantly working online, downloading from the build page is recommended)
+The web application version can be found [here](https://wyatt-hart.github.io/danger-xing/).
 
 
-###### Last modified with: Godot 4.6.2
+###### Last modified with: Godot 4.7

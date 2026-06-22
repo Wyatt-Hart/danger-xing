@@ -7,6 +7,13 @@ class_name Chicken
 @onready var score_ui: Label = $UI/ScoreUI
 @onready var gameover_ui: PanelContainer = $GameOverContainer
 
+# Touch Controls
+@onready var touch_controls: PanelContainer = $TouchControls
+@onready var up_arrow_btn: Button = $TouchControls/VBoxContainer/HBoxContainer2/UpArrowBtn
+@onready var left_arrow_btn: Button = $TouchControls/VBoxContainer/HBoxContainer/LeftArrowBtn
+@onready var down_arrow_btn: Button = $TouchControls/VBoxContainer/HBoxContainer/DownArrowBtn
+@onready var right_arrow_btn: Button = $TouchControls/VBoxContainer/HBoxContainer/RightArrowBtn
+
 var main: Main
 var lives: int = 8
 var score: int = 0
@@ -23,7 +30,13 @@ var riding_vessel: Vessel = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if !is_mobile_web():
+		touch_controls.hide()
 	area_entered.connect(on_collision)
+	up_arrow_btn.pressed.connect(move.bind(Vector3.FORWARD, 0.0))
+	left_arrow_btn.pressed.connect(move.bind(Vector3.LEFT, 90.0))
+	down_arrow_btn.pressed.connect(move.bind(Vector3.BACK, 180.0))
+	right_arrow_btn.pressed.connect(move.bind(Vector3.RIGHT, -90.0))
 	lives_ui.text = "Lives: " + str(lives)
 	score_ui.text = "Score: " + str(score)
 	gameover_ui.visible = false
@@ -91,11 +104,9 @@ func _process(delta: float) -> void:
 			move(Vector3.RIGHT, -90.0)
 	
 		elif Input.is_action_just_pressed("move_forward"):
-			riding_vessel = null
 			move(Vector3.FORWARD, 0.0)
 
 		elif Input.is_action_just_pressed("move_backward"):
-			riding_vessel = null
 			move(Vector3.BACK, 180.0)
 	
 	# Update position
@@ -115,9 +126,18 @@ func _process(delta: float) -> void:
 
 	
 func move(direction: Vector3, rotation: float):
+	if direction == Vector3.FORWARD or direction == Vector3.BACK:
+		riding_vessel = null
 	from = position
 	to = from - direction
 	to.x = to.round().x
 	to.z = to.round().z
 	weight = 0.0
 	mesh.rotation_degrees.y = rotation
+	
+func is_mobile_web() -> bool:
+	if OS.has_feature("web_android") or OS.has_feature("web_ios"):
+		return true
+	if OS.has_feature("mobile"):
+		return true
+	return false

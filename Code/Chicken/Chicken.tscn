@@ -148,3 +148,63 @@ theme_override_fonts/font = ExtResource("3_htchh")
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TouchControls" type="PanelContainer" parent="." unique_id=1470460920]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.375
+offset_top = -148.0
+offset_right = 91.375
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TouchControls" unique_id=588136659]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TouchControls/VBoxContainer" unique_id=957163940]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FillLeft" type="PanelContainer" parent="TouchControls/VBoxContainer/HBoxContainer2" unique_id=159170628]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UpArrowBtn" type="Button" parent="TouchControls/VBoxContainer/HBoxContainer2" unique_id=190286301]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "^"
+
+[node name="FillRight" type="PanelContainer" parent="TouchControls/VBoxContainer/HBoxContainer2" unique_id=1601615224]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TouchControls/VBoxContainer" unique_id=1792625748]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="LeftArrowBtn" type="Button" parent="TouchControls/VBoxContainer/HBoxContainer" unique_id=1306336920]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<"
+
+[node name="DownArrowBtn" type="Button" parent="TouchControls/VBoxContainer/HBoxContainer" unique_id=1180827721]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "v
+"
+
+[node name="RightArrowBtn" type="Button" parent="TouchControls/VBoxContainer/HBoxContainer" unique_id=640862240]
+layout_mode = 2
+size_flags_horizontal = 3
+text = ">"
