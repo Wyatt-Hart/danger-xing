@@ -150,17 +150,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TouchControls" type="PanelContainer" parent="." unique_id=1470460920]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -91.375
-offset_top = -148.0
-offset_right = 91.375
-offset_bottom = -29.0
+offset_left = -277.1875
+offset_top = -386.0
+offset_right = 277.1875
 grow_horizontal = 2
 grow_vertical = 0
 
