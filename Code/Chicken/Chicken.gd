@@ -32,9 +32,10 @@ var riding_vessel: Vessel = null
 func _ready() -> void:
 	if !is_mobile_web():
 		touch_controls.hide()
-		get_tree().root.content_scale_factor = 2
+		get_tree().root.content_scale_factor = 1
 	else:
 		touch_controls.show()
+		get_tree().root.content_scale_factor = 2
 	area_entered.connect(on_collision)
 	up_arrow_btn.pressed.connect(move.bind(Vector3.FORWARD, 0.0))
 	left_arrow_btn.pressed.connect(move.bind(Vector3.LEFT, 90.0))
